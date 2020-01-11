@@ -16,7 +16,9 @@
     "migrate-db": "node_modules/.bin/sequelize db:migrate",
     "prod-logs": "heroku logs --tail",
     "g": "./scripts/generations.sh",
-    "cov-report": "open ./coverage/lcov-report/index.html"
+    "cov-report": "open ./coverage/lcov-report/index.html",
+    "submodule-update": "git submodule update --recursive",
+    "submodule-init": "git submodule update --init --recursive"
   },
   "keywords": [],
   "author": "",
