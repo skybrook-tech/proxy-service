@@ -6,11 +6,11 @@ const config = {
   routes: [
     {
       subDomain: "app",
-      address: "http://localhost:4040"
+      address: "http://localhost:1001"
     },
     {
       subDomain: "*",
-      address: "http://localhost:1001"
+      address: "http://localhost:1002"
     }
   ]
 };
