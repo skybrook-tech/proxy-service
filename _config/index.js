@@ -12,8 +12,12 @@ const config = {
       address: "http://localhost:1001"
     },
     {
-      subDomain: "*",
+      subDomain: "auth",
       address: "http://localhost:1002"
+    },
+    {
+      subDomain: "*",
+      address: "http://localhost:1003"
     }
   ]
 };
