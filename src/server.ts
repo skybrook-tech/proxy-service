@@ -5,12 +5,8 @@ import proxy from "http-proxy-middleware";
 import { Request, Response, NextFunction } from "express";
 import config from "../_config";
 
+const { DOMAIN, PORT } = config;
 const app = setupServerDefaults();
-
-dotenv.config();
-
-const DOMAIN = process.env.DOMAIN;
-const PORT = process.env.PORT;
 
 config.routes.forEach(({ address, subDomain }: { address: string; subDomain: string }) => {
   app.use(
@@ -28,5 +24,5 @@ config.routes.forEach(({ address, subDomain }: { address: string; subDomain: str
 });
 
 app.listen(PORT, () => {
-  console.log(`Server ready at http://${DOMAIN}:${PORT}`);
+  console.log(`Server ready at http://%%service%%.${DOMAIN}:${PORT}`);
 });
